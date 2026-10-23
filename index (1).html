@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peluquería Canina Sara Escudero · Gijón</title>
+<meta name="description" content="Peluquería canina en Gijón: baño y secado, corte higiénico, corte a tijera o máquina, cepillado y arreglo completo. Consulta precios orientativos y solicita cita.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--crema:#F8F5EF;--roto:#FFFEFA;--salvia:#78866B;--verde:#53654B;--marron:#54453B;--terra:#BD8068;--r:18px;--sombra:0 10px 30px rgba(84,69,59,.10)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--crema);color:var(--marron);font:400 1.0625rem/1.65 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3{font-family:Fraunces,Georgia,"Times New Roman",serif;font-weight:600;line-height:1.15;margin:0;color:var(--marron)}
+h1{font-size:clamp(2.2rem,6vw,3.9rem);letter-spacing:-.015em}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.01em}
+h3{font-size:1.6rem}
+p{margin:0 0 1em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--verde);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding:clamp(3.5rem,8vw,6.5rem) 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.75rem 1.5rem;border-radius:999px;font:600 1rem Figtree,sans-serif;text-decoration:none;border:2px solid var(--verde);cursor:pointer;transition:background .2s,color .2s}
+.btn-p{background:var(--verde);color:var(--roto)}
+.btn-p:hover{background:var(--marron);border-color:var(--marron)}
+.btn-s{background:transparent;color:var(--verde)}
+.btn-s:hover{background:var(--verde);color:var(--roto)}
+.btn[aria-disabled="true"]{opacity:.55;pointer-events:none}
+[hidden]{display:none!important}
+
+/* cabecera */
+header{position:sticky;top:0;z-index:20;background:rgba(248,245,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(84,69,59,.12)}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:1rem}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;font:600 1.15rem Fraunces,Georgia,serif;line-height:1.1}
+.logo svg{flex:none}
+nav ul{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0;align-items:center}
+nav a{text-decoration:none;font-weight:500}
+nav a:not(.btn):hover{color:var(--verde);text-decoration:underline;text-underline-offset:5px}
+.burger{display:none;background:none;border:0;padding:.6rem;cursor:pointer;color:var(--marron)}
+@media(max-width:880px){
+ .burger{display:block}
+ nav{position:absolute;inset:68px 0 auto 0;background:var(--roto);border-bottom:1px solid rgba(84,69,59,.12);max-height:0;overflow:hidden;visibility:hidden;transition:max-height .3s}
+ nav.open{max-height:420px;visibility:visible}
+ nav ul{flex-direction:column;align-items:stretch;gap:0;padding:.5rem 1.25rem 1.25rem}
+ nav li a:not(.btn){display:block;padding:.85rem 0;border-bottom:1px solid rgba(84,69,59,.08)}
+ nav li:last-child{margin-top:1rem}
+}
+
+/* portada */
+.hero{padding-top:clamp(2rem,5vw,4rem)}
+.hero-g{display:grid;gap:2.5rem;align-items:center}
+.hero p.lead{font-size:1.2rem;max-width:34rem;margin:1.25rem 0 1.75rem}
+.acts{display:flex;flex-wrap:wrap;gap:.8rem}
+.hero-img{position:relative}
+.hero-img img{width:100%;aspect-ratio:4/3.4;object-fit:cover;object-position:50% 40%;border-radius:var(--r) var(--r) 180px var(--r);box-shadow:var(--sombra)}
+.hero-note{margin-top:1.6rem;font-size:.95rem;color:var(--verde);display:flex;gap:.6rem;align-items:center}
+.hero-note::before{content:"";width:34px;height:2px;background:var(--terra)}
+@media(min-width:900px){.hero-g{grid-template-columns:1.05fr .95fr;gap:4rem}.hero-img img{aspect-ratio:4/4.6}}
+
+/* servicios */
+.head{max-width:40rem;margin-bottom:3rem}
+.head p{margin-top:.9rem}
+#servicios{background:var(--roto)}
+.srv{display:grid;gap:1.5rem;padding:2.5rem 0;border-top:1px solid rgba(84,69,59,.14);align-items:center}
+.srv:first-of-type{border-top:0;padding-top:0}
+.srv img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);box-shadow:var(--sombra)}
+.srv p{max-width:30rem}
+.precios{margin:1.2rem 0 0;padding:0;max-width:24rem}
+.precios div{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-bottom:1px dashed rgba(84,69,59,.25)}
+.precios dt{font-weight:500}
+.precios dd{margin:0;font:600 1.15rem Fraunces,Georgia,serif;color:var(--verde)}
+@media(min-width:800px){
+ .srv{grid-template-columns:1fr 1fr;gap:4rem}
+ .srv:nth-of-type(even) .srv-img{order:2}
+}
+.aviso{margin-top:1rem;padding:1rem 1.25rem;border-left:4px solid var(--terra);background:var(--crema);border-radius:0 var(--r) var(--r) 0;font-size:.95rem}
+
+/* galeria */
+.gal{display:grid;gap:1rem}
+.gal figure{margin:0;overflow:hidden;border-radius:var(--r);background:var(--roto);box-shadow:var(--sombra)}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal figcaption{padding:.7rem 1rem;font-size:.92rem}
+@media(min-width:760px){.gal{grid-template-columns:1.6fr 1fr}}
+.nota{font-size:.92rem;margin-top:1.2rem;color:var(--verde)}
+
+/* sobre sara */
+#sara{background:var(--verde);color:var(--roto)}
+#sara h2{color:var(--roto)}
+.sara-g{display:grid;gap:1.5rem}
+.sara-g p{max-width:36rem;font-size:1.12rem}
+@media(min-width:860px){.sara-g{grid-template-columns:1fr 1fr;gap:4rem}}
+
+/* contacto */
+.cont-g{display:grid;gap:2rem}
+.card{background:var(--roto);border-radius:var(--r);padding:2rem;box-shadow:var(--sombra)}
+.card address{font-style:normal;margin:1rem 0 1.5rem;font-size:1.1rem}
+.card .acts{margin-top:1rem}
+.pend{font-size:.95rem;color:var(--verde)}
+@media(min-width:860px){.cont-g{grid-template-columns:1fr 1fr}}
+
+footer{background:var(--marron);color:var(--crema);padding:3rem 0 2rem;font-size:.95rem}
+footer a{color:var(--crema)}
+.f-g{display:grid;gap:2rem}
+.f-g ul{list-style:none;padding:0;margin:0}
+.f-g li{margin:.3rem 0}
+.f-g strong{font:600 1.15rem Fraunces,Georgia,serif}
+.legal{margin-top:2rem;padding-top:1.2rem;border-top:1px solid rgba(248,245,239,.25);font-size:.88rem;opacity:.85}
+@media(min-width:760px){.f-g{grid-template-columns:1.4fr 1fr 1fr}}
+
+/* una sola animación de entrada en la portada */
+@media(prefers-reduced-motion:no-preference){.hero-g>*{animation:in .8s ease both}.hero-img{animation-delay:.15s}}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap bar">
+  <a class="logo" href="#inicio" aria-label="Peluquería Canina Sara Escudero, ir al inicio">
+   <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#78866B"/><path d="M9 21c0-5 3.5-9 8-9s8 4 8 9c0 3-2 4.5-4 4.5-1.5 0-2.2-.8-4-.8s-2.500.8-4 .8c-2 0-4-1.500-4-4.500Z" fill="#FFFEFA"/><path d="M8.500 13.500c-2 .5-3 3-2 5M25.500 13.500c2 .5 3 3 2 5" stroke="#FFFEFA" stroke-width="2" stroke-linecap="round"/></svg>
+   <span>Sara Escudero<br><small style="font:500 .78rem Figtree,sans-serif;color:var(--verde)">Peluquería canina · Gijón</small></span>
+  </a>
+  <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Principal">
+   <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#servicios">Servicios y precios</a></li>
+    <li><a href="#galeria">Galería</a></li>
+    <li><a href="#sara">Sobre Sara</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a class="btn btn-p" href="#contacto" data-cita>Solicitar cita</a></li>
+   </ul>
+  </nav>
+ </div>
+</header>
+
+<main id="inicio">
+ <section class="hero">
+  <div class="wrap hero-g">
+   <div>
+    <h1>Cuidado con calma para tu perro, en Gijón</h1>
+    <p class="lead">Baño, corte y cepillado adaptados al tamaño y al pelo de cada perro. Consulta los servicios y escríbenos para pedir cita.</p>
+    <div class="acts">
+     <a class="btn btn-p" href="#contacto" data-cita>Solicitar cita</a>
+     <a class="btn btn-s" href="#servicios">Ver servicios</a>
+    </div>
+    <p class="hero-note">Un trato individual, sin prisas, en cada visita.</p>
+   </div>
+   <div class="hero-img">
+   <img src="hero.jpg" width="1200" height="800" alt="Bichón maltés de pelo largo y blanco, recién cepillado, sobre fondo crema">
+   </div>
+  </div>
+ </section>
+
+ <section id="servicios">
+  <div class="wrap">
+   <div class="head">
+    <h2>Servicios y precios</h2>
+    <p>Cinco servicios para elegir por separado o combinar. El tamaño del perro marca la tarifa orientativa.</p>
+   </div>
+
+   <article class="srv">
+    <div class="srv-img"><img src="bano-secado.jpg" width="900" height="900" loading="lazy" alt="Zona de baño con bañera de acero inoxidable, secador y productos de higiene canina"></div>
+    <div>
+     <h3>Baño y secado</h3>
+     <p>Lavado con productos adecuados para el tipo de manto y secado cuidadoso hasta dejar el pelo limpio y suelto.</p>
+     <dl class="precios">
+      <div><dt>Perro pequeño</dt><dd>18 €</dd></div>
+      <div><dt>Perro mediano</dt><dd>25 €</dd></div>
+      <div><dt>Perro grande</dt><dd>35 €</dd></div>
+     </dl>
+    </div>
+   </article>
+
+   <article class="srv">
+    <div class="srv-img"><img src="corte-higienico.jpg" width="900" height="600" loading="lazy" alt="Peluquera recortando con tijeras el pelo del cuello de un bichón blanco"></div>
+    <div>
+     <h3>Corte higiénico</h3>
+     <p>Recorte de las zonas que más lo necesitan para mantener al perro cómodo y limpio entre arreglos completos.</p>
+     <dl class="precios">
+      <div><dt>Desde</dt><dd>15 €</dd></div>
+     </dl>
+    </div>
+   </article>
+
+   <article class="srv">
+    <div class="srv-img"><img src="corte-tijera.jpg" width="900" height="591" loading="lazy" alt="Corte a tijera de detalle en la cara de un bichón blanco"></div>
+    <div>
+     <h3>Corte a máquina o tijera</h3>
+     <p>El corte se decide según la raza, el pelo y lo que busques para tu perro: acabado a tijera o a máquina.</p>
+     <dl class="precios">
+      <div><dt>Perro pequeño</dt><dd>30 €</dd></div>
+      <div><dt>Perro mediano</dt><dd>40 €</dd></div>
+      <div><dt>Perro grande</dt><dd>50 €</dd></div>
+     </dl>
+    </div>
+   </article>
+
+   <article class="srv">
+    <div class="srv-img"><img src="cepillado.jpg" width="900" height="637" loading="lazy" alt="Peluquera cepillando con una carda roja a un perro blanco sobre la mesa de trabajo"></div>
+    <div>
+     <h3>Desenredado y cepillado adicional</h3>
+     <p>Para pelo con nudos o mucho manto: un repaso extra con cepillo para dejarlo suave y sin enredos.</p>
+     <dl class="precios">
+      <div><dt>Desde</dt><dd>10 €</dd></div>
+     </dl>
+    </div>
+   </article>
+
+   <article class="srv">
+    <div class="srv-img"><img src="arreglo-completo.jpg" width="720" height="720" loading="lazy" alt="Caniche color albaricoque con corte redondeado, sentado sobre la mesa de peluquería junto a unas tijeras"></div>
+    <div>
+     <h3>Arreglo completo</h3>
+     <p>Baño, secado y corte en una sola visita, con el acabado que mejor le sienta a tu perro.</p>
+     <dl class="precios">
+      <div><dt>Perro pequeño</dt><dd>35 €</dd></div>
+      <div><dt>Perro mediano</dt><dd>45 €</dd></div>
+      <div><dt>Perro grande</dt><dd>60 €</dd></div>
+     </dl>
+    </div>
+   </article>
+
+   <p class="aviso">Precios orientativos. El presupuesto definitivo puede variar según el tamaño del perro, el tipo y estado del manto y el tiempo necesario. Consulta las condiciones con el establecimiento.</p>
+  </div>
+ </section>
+
+ <section id="galeria">
+  <div class="wrap">
+   <div class="head">
+    <h2>Galería</h2>
+    <p>Algunos ejemplos de cuidado y de acabado en perros de distintos tipos de pelo.</p>
+   </div>
+   <div class="gal">
+    <figure>
+     <img src="galeria-yorkshire.jpg" width="1200" height="799" loading="lazy" alt="Yorkshire terrier antes y después del arreglo: a la izquierda con el pelo enredado, a la derecha peinado y con un lazo">
+     <figcaption>Yorkshire terrier, antes y después del arreglo</figcaption>
+    </figure>
+    <figure>
+     <img src="galeria-cuidado.jpg" width="900" height="600" loading="lazy" alt="Peluquera sonriendo mientras cepilla a un perro de pelo rizado color crema">
+     <figcaption>Atención durante el cepillado</figcaption>
+    </figure>
+   </div>
+   <p class="nota">Imágenes de demostración provisionales: se sustituirán por fotografías de perros atendidos en la peluquería.</p>
+  </div>
+ </section>
+
+ <section id="sara">
+  <div class="wrap sara-g">
+   <h2>Sobre Sara</h2>
+   <div>
+    <p>Cada perro tiene un tipo de pelo, un carácter y unas necesidades distintas. Por eso el cuidado se plantea de forma individual: se escucha lo que necesita el perro y lo que busca su familia.</p>
+    <p>Aquí se contará la trayectoria de Sara cuando haya información confirmada por ella.</p>
+   </div>
+  </div>
+ </section>
+
+ <section id="contacto">
+  <div class="wrap cont-g">
+   <div class="head" style="margin:0">
+    <h2>Contacto y cómo llegar</h2>
+    <p>Escríbenos para consultar disponibilidad y precios. Pedir información no supone reservar la cita: Sara confirmará contigo el día y la hora.</p>
+   </div>
+   <div class="card">
+    <h3 data-biz>Peluquería Canina Sara Escudero</h3>
+    <address data-addr>Calle Daniel, 9<br>Gijón, Asturias, España</address>
+    <p data-hours hidden></p>
+    <div class="acts">
+     <a class="btn btn-p" data-wa hidden target="_blank" rel="noopener">Pedir cita por WhatsApp</a>
+     <a class="btn btn-s" data-tel hidden>Llamar</a>
+     <a class="btn btn-s" data-map target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+    <p class="pend" data-pend style="margin:1rem 0 0">El teléfono y el WhatsApp se añadirán próximamente.</p>
+   </div>
+  </div>
+ </section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="f-g">
+   <div>
+    <strong data-biz>Peluquería Canina Sara Escudero</strong>
+    <p style="margin-top:.6rem">Calle Daniel, 9<br>Gijón, Asturias, España</p>
+   </div>
+   <ul aria-label="Enlaces del pie">
+    <li><a href="#servicios">Servicios y precios</a></li>
+    <li><a href="#galeria">Galería</a></li>
+    <li><a href="#sara">Sobre Sara</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+   </ul>
+   <ul aria-label="Contacto">
+    <li data-f-wa hidden><a data-wa target="_blank" rel="noopener">WhatsApp</a></li>
+    <li data-f-tel hidden><a data-tel>Teléfono</a></li>
+    <li><a data-map target="_blank" rel="noopener">Cómo llegar</a></li>
+   </ul>
+  </div>
+  <p class="legal">Aviso legal y política de privacidad: pendientes de añadir.</p>
+ </div>
+</footer>
+
+<script>
+const CONFIG = {
+  businessName: "Peluquería Canina Sara Escudero",
+  address: "Calle Daniel, 9, Gijón, Asturias, España",
+  phone: "",          // Ejemplo: "+34 985 00 00 00"
+  whatsapp: "",       // Ejemplo: "+34 600 00 00 00" (con prefijo internacional)
+  openingHours: ""    // Ejemplo: "Lunes a viernes, 10:00–19:00"
+};
+
+(function(){
+  const $$ = s => document.querySelectorAll(s);
+  const waNum = CONFIG.whatsapp.replace(/\D/g,"");
+  const telNum = CONFIG.phone.replace(/[^\d+]/g,"");
+  const hasWa = waNum.length >= 10;
+  const hasTel = telNum.replace(/\D/g,"").length >= 9;
+  const msg = "Hola, me gustaría consultar disponibilidad y precios para una cita de peluquería canina.";
+  const waUrl = "https://wa.me/" + waNum + "?text=" + encodeURIComponent(msg);
+
+  $$("[data-biz]").forEach(e => e.textContent = CONFIG.businessName);
+  $$("[data-map]").forEach(a => a.href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(CONFIG.businessName + ", " + CONFIG.address));
+
+  if (hasWa) {
+    $$("[data-wa]").forEach(a => { a.href = waUrl; a.hidden = false; });
+    $$("[data-f-wa]").forEach(e => e.hidden = false);
+    $$("[data-cita]").forEach(a => { a.href = waUrl; a.target = "_blank"; a.rel = "noopener"; });
+  }
+  if (hasTel) {
+    $$("[data-tel]").forEach(a => { a.href = "tel:" + telNum; a.hidden = false; if (a.classList.contains("btn")) a.textContent = "Llamar"; else a.textContent = CONFIG.phone; });
+    $$("[data-f-tel]").forEach(e => e.hidden = false);
+  }
+  if (hasWa || hasTel) $$("[data-pend]").forEach(e => e.hidden = true);
+  if (CONFIG.openingHours) $$("[data-hours]").forEach(e => { e.textContent = "Horario: " + CONFIG.openingHours; e.hidden = false; });
+
+  // menú móvil
+  const b = document.querySelector(".burger"), n = document.getElementById("menu");
+  const close = () => { n.classList.remove("open"); b.setAttribute("aria-expanded","false"); };
+  b.addEventListener("click", () => { const o = n.classList.toggle("open"); b.setAttribute("aria-expanded", o); });
+  n.addEventListener("click", e => { if (e.target.closest("a")) close(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
+})();
+</script>
+</body>
+</html>
